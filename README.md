@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr text-right">
 <head>
+        <link rel="icon" href="favicon.png.jpeg">
         <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
