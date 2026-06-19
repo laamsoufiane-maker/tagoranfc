@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr text-right">
-<head>
-    <meta charset="UTF-8">
+    <head>
+<meta charset="UTF-8">
+<meta property="og:image" content="https://tagoranfc.shop/favicon.png.jpeg">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"TAGORA NFC",
+  "url":"https://tagoranfc.shop",
+  "logo":"https://tagoranfc.shop/favicon.png.jpeg"
+}
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" href="favicon.png.jpeg">
 <link rel="apple-touch-icon" href="favicon-512.png">
 
 <title>TAGORA NFC - Smart NFC Stickers & Cards Morocco</title>
-</head>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Fonts Import -->
