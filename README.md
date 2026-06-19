@@ -383,7 +383,7 @@
 
                 <!-- Zone Image illustrative -->
                 <div class="relative aspect-video w-full bg-zinc-950 overflow-hidden border-b border-zinc-900">
-            <img src="c:\Users\hp\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\647412E0451BD22A632A513728E6057D08E6EDF1\transfers\2026-25\IMG_6515.PNG" alt="">
+            <img src="c:\Users\hp\Desktop\3720a4a9-9b53-4ec0-b5ec-6cfd211409fb.jfif" alt="">
                 </div>
                 <div class="p-6 md:p-8 flex-1 flex flex-col justify-between space-y-6">
                     <div>
