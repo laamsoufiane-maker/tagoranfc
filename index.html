@@ -8,6 +8,7 @@
 <link rel="apple-touch-icon" href="favicon-512.png">
 
 <title>TAGORA NFC - Smart NFC Stickers & Cards Morocco</title>
+</head>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Fonts Import -->
