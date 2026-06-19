@@ -383,7 +383,7 @@
 
                 <!-- Zone Image illustrative -->
                 <div class="relative aspect-video w-full bg-zinc-950 overflow-hidden border-b border-zinc-900">
-            <img src="c:\Users\hp\Desktop\e67b4010-7dd3-48fc-a84a-e7add0da7c24.jpg" alt="">
+            <img src="c:\Users\hp\Desktop\site web nasser et soufiane\e67b4010-7dd3-48fc-a84a-e7add0da7c24.jpg" alt="">
                 </div>
                 <div class="p-6 md:p-8 flex-1 flex flex-col justify-between space-y-6">
                     <div>
@@ -413,9 +413,7 @@
                                 <span class="text-zinc-600 line-through text-xs">199 DH</span>
                             </div>
                         </div>
-
-                        <button onclick="selectProductForCheckout('tagore')" class="bg-zinc-900 border border-brand-cyan/30 hover:border-brand-cyan text-white hover:text-brand-cyan text-xs font-extrabold py-3 px-5 rounded-xl uppercase tracking-wider transition-all shadow-lg flex items-center gap-1.5 cursor-pointer">
-                            <span>Commander</span>
+                            
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </button>
                     </div>
@@ -463,7 +461,7 @@
                                 <span class="text-zinc-600 line-through text-xs">349 DH</span>
                             </div>
                         </div>
-                         <button onclick="selectProductForCheckout('tagore')" class="bg-zinc-900 border border-brand-cyan/30 hover:border-brand-cyan text-white hover:text-brand-cyan text-xs font-extrabold py-3 px-5 rounded-xl uppercase tracking-wider transition-all shadow-lg flex items-center gap-1.5 cursor-pointer">COMMANDER </button>
+                         
 
 </button>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
@@ -646,12 +644,29 @@
                         </div>
 
                         <!-- Bouton vert de commande WhatsApp -->
-                        <button type="submit" class="w-full bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white font-bold p-4 rounded-xl flex items-center justify-center gap-3 transition-transform active:scale-98 shadow-lg shadow-emerald-950/45 text-sm md:text-base border border-emerald-400/25 cursor-pointer">
-                            <i data-lucide="shopping-cart" class="w-5 h-5 animate-pulse"></i>
-                            <span>COMMANDER SUR WHATSAPP</span>
-                            <span class="font-orbitron font-extrabold text-[11px] bg-white/20 px-2 py-0.5 rounded-full font-mono">إتمام الطلب</span>
-                        </button>
-                        
+            <button type="button" onclick="sendWhatsApp()"
+class="w-full bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white font-bold p-4 rounded-xl"><i data-lucide="shopping-cart" class="w-5 h-5 animate-pulse"></i>
+    <span>COMMANDER SUR WHATSAPP</span>
+    <span class="font-orbitron font-extrabold text-[11px] bg-white/20 px-2 py-0.5 rounded-full font-mono">إتمام الطلب</span>
+</button>
+<script>
+function sendWhatsApp() {
+
+    let message =
+`السلام عليكم،
+
+أريد طلب Tagora NFC
+
+💰 الثمن: 149 DH`;
+
+    window.open(
+        "https://api.whatsapp.com/send/?phone=212715374284&text=Salam+TAGORA%2C+bghit+ndir+commande+stiker+NFC+%EF%BF%BD&type=phone_number&app_absent=0" +
+       
+        encodeURIComponent(message),
+        "_blank"
+    );
+}
+</script>
                         <p class="text-center text-zinc-500 text-[10px] leading-relaxed">
                             * بعد نقر الزر، ستفتح نافذة الدردشة واتساب لرسالة تأكيد طلبكم وعنوانكم. الشحن السريع في غضون 24-48 ساعة.
                         </p>
