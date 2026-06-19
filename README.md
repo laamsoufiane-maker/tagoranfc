@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr text-right">
+<html lang="fr" text-right">
 <head>
-        <link rel="icon" href="favicon.png.jpeg">
-        <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.png.jpeg">
 
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="apple-touch-icon" href="favicon-512.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>TAGORA NFC - Smart NFC Stickers & Cards Morocco</title>
     <!-- Tailwind CSS CDN -->
