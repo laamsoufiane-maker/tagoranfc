@@ -1,25 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr text-right">
-    <head>
-<meta charset="UTF-8">
-<meta property="og:image" content="https://tagoranfc.shop/favicon.png.jpeg">
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"TAGORA NFC",
-  "url":"https://tagoranfc.shop",
-  "logo":"https://tagoranfc.shop/favicon.png.jpeg"
-}
-</script>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="icon" href="favicon.png.jpeg">
-<link rel="apple-touch-icon" href="favicon-512.png">
-
-<title>TAGORA NFC - Smart NFC Stickers & Cards Morocco</title>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAGORA NFC - Smart NFC Stickers & Cards Morocco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,7 +15,6 @@
     
     <!-- Tailwind Configuration -->
     <script>
-
         tailwind.config = {
             theme: {
                 extend: {
@@ -50,10 +34,59 @@
             }
         }
     </script>
-</head>
-<body>
+
     <!-- Custom Styling & Animations -->
     <style>
+        .social-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-top:30px;
+}
+
+.social-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:180px;
+    border-radius:20px;
+    text-decoration:none;
+    color:white;
+    border:1px solid rgba(255,255,255,.1);
+    transition:.3s;
+}
+
+.social-card:hover{
+    transform:translateY(-5px);
+}
+
+.sc-fb{
+    background:#0d203d;
+}
+
+.sc-ig{
+    background:#2a0d1f;
+}
+
+.sc-tk{
+    background:#000000;
+}
+
+.sc-wa{
+    background:#0d2a16;
+}
+
+.name{
+    font-size:24px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.shandle{
+    color:#999;
+    margin-top:10px;
+}
         /* Grille futuriste 3D animée en arrière-plan */
         .retro-grid {
             position: absolute;
@@ -196,6 +229,94 @@
         }
         @keyframes tagoraIntro {
             to { transform: translateY(0); }
+        }
+
+
+        /* SECTION RÉSEAUX SOCIAUX - STYLE PREMIUM */
+        .tagora-social-section{
+            width:100%;
+            padding:80px 20px;
+            background:#000000;
+            text-align:center;
+            border-top:1px solid rgba(255,255,255,.06);
+            border-bottom:1px solid rgba(255,255,255,.06);
+        }
+        .tagora-social-label{
+            color:#ff1744;
+            font-size:13px;
+            font-weight:900;
+            letter-spacing:8px;
+            text-transform:uppercase;
+            margin-bottom:18px;
+            font-family:Orbitron, Inter, sans-serif;
+        }
+        .tagora-social-title{
+            font-size:clamp(34px,5vw,58px);
+            font-weight:900;
+            line-height:1.05;
+            margin-bottom:22px;
+            color:#fff;
+            font-family:Inter, Arial, sans-serif;
+        }
+        .tagora-social-title span{
+            color:#d6b64a;
+        }
+        .tagora-social-sub{
+            color:#8c8c8c;
+            font-size:18px;
+            margin-bottom:55px;
+        }
+        .tagora-social-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+    justify-content:center;
+    align-items:center;
+    max-width:1200px;
+    margin:0 auto;
+}
+        .tagora-social-card{
+            min-height:180px;
+            border-radius:18px;
+            text-decoration:none;
+            color:white;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            padding:28px 18px;
+            border:1px solid rgba(255,255,255,.10);
+            transition:.3s ease;
+        }
+        .tagora-social-card:hover{
+            transform:translateY(-8px);
+            border-color:rgba(255,255,255,.25);
+        }
+        .tagora-social-card i{
+            font-size:58px;
+            margin-bottom:22px;
+            line-height:1;
+        }
+        .tagora-social-name{
+            font-size:18px;
+            font-weight:900;
+            color:#fff;
+            margin-bottom:18px;
+        }
+        .tagora-social-handle{
+            color:#8d8d8d;
+            font-size:15px;
+            white-space:nowrap;
+        }
+        .tagora-facebook{background:#000000;border-color:#000000;}
+        .tagora-instagram{background:#b3608b;border: color #ff0303;;}
+        .tagora-tiktok{background:#090909;border-color:#4d1b1b;}
+        .tagora-whatsapp{background:#102716;border-color:#145c2d;}
+        @media(max-width:1100px){
+            .tagora-social-grid{grid-template-columns:repeat(2,1fr);}
+        }
+        @media(max-width:600px){
+            .tagora-social-grid{grid-template-columns:1fr;}
         }
 
     </style>
@@ -402,7 +523,7 @@
 
                 <!-- Zone Image illustrative -->
                 <div class="relative aspect-video w-full bg-zinc-950 overflow-hidden border-b border-zinc-900">
-           <img src="instagram-nfc.jpg" alt="Instagram NFC" class="rounded-3xl shadow-2xl w-full max-w-lg">
+            <img src="c:\Users\hp\Desktop\site web nasser et soufiane\e67b4010-7dd3-48fc-a84a-e7add0da7c24.jpg" alt="">
                 </div>
                 <div class="p-6 md:p-8 flex-1 flex flex-col justify-between space-y-6">
                     <div>
@@ -509,9 +630,8 @@
                 </h3>
                 <p class="text-zinc-400 text-sm mt-1">إملأ الاستمارة لطلب المنتج مباشرة عبر تطبيق واتساب (الدفع عند الاستلام)</p>
             </div>
+ <form id="order-wizard-form" onsubmit="handleOrderSubmission(event)" class="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
-            <form id="order-wizard-form" onsubmit="handleOrderSubmission(event)" class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-                
                 <!-- Partie Gauche de configuration -->
                 <div class="lg:col-span-7 space-y-6">
                     
@@ -696,6 +816,42 @@ function sendWhatsApp() {
             </form>
         </div>
     </section>
+</div>
+
+    <!-- SECTION RÉSEAUX SOCIAUX PREMIUM -->
+    <section class="tagora-social-section" id="reseaux">
+        <div class="tagora-social-label">SUIVEZ-NOUS</div>
+
+        <h2 class="tagora-social-title">
+            Nos <span>réseaux sociaux</span>
+        </h2>
+
+        <p class="tagora-social-sub">
+            Retrouvez nos conseils, vidéos et actualités sur toutes les plateformes.
+        </p>
+
+   <div class="tagora-social-grid" style="display:flex;justify-content:center;align-items:center;gap:28px;flex-wrap:wrap;width:100%;margin:40px auto 0 auto;text-align:center;"> 
+                   <a href="https://www.facebook.com/share/1B8R855LAg/?mibextid=wwXIfr" target="_blank" class="tagora-social-card tagora-facebook">
+                       <i class="fa-brands fa-facebook-f" style="color:#1877f2;"></i>
+                       <span class="tagora-social-name">Facebook</span>
+                       <span class="tagora-social-handle">tagora.nfc</span>
+                   </a>
+
+        <a href="https://www.instagram.com/tagora_nfc?igsh=dWM3bW5iMmM3Nnp0" target="_blank" class="tagora-social-card tagora-facebook">
+                <i class="fa-brands fa-instagram" style="color:#e1306c;"></i>
+                <span class="tagora-social-name">Instagram</span>
+                <span class="tagora-social-handle">tagora_nfc</span>
+            </a>
+
+            <a href="https://www.tiktok.com/@tagora.nfc?_r=1&_t=ZS-97M1htXWDYo" target="_blank" class="tagora-social-card tagora-tiktok">
+                <i class="fa-brands fa-tiktok" style="color:#ffffff;"></i>
+                <span class="tagora-social-name">TikTok</span>
+                <span class="tagora-social-handle">tagora.nfc</span>
+            </a>
+
+        </div>
+    </section>
+
 
     <!-- EXPANSIONS AVIS CLIENTS -->
     <section class="py-20 bg-zinc-950/40 px-4 md:px-8 max-w-7xl mx-auto relative z-10 border-t border-zinc-900">
