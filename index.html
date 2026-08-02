@@ -782,29 +782,12 @@
                         </div>
 
                         <!-- Bouton vert de commande WhatsApp -->
-            <button type="button" onclick="sendWhatsApp()"
-class="w-full bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white font-bold p-4 rounded-xl"><i data-lucide="shopping-cart" class="w-5 h-5 animate-pulse"></i>
+            <button type="submit"
+class="w-full bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white font-bold p-4 rounded-xl flex items-center justify-center gap-2"><i data-lucide="shopping-cart" class="w-5 h-5 animate-pulse"></i>
     <span>COMMANDER SUR WHATSAPP</span>
     <span class="font-orbitron font-extrabold text-[11px] bg-white/20 px-2 py-0.5 rounded-full font-mono">إتمام الطلب</span>
 </button>
-<script>
-function sendWhatsApp() {
 
-    let message =
-`السلام عليكم،
-
-أريد طلب Tagora NFC
-
-💰 الثمن: 149 DH`;
-
-    window.open(
-        "https://api.whatsapp.com/send/?phone=212715374284&text=Salam+TAGORA%2C+bghit+ndir+commande+stiker+NFC+%EF%BF%BD&type=phone_number&app_absent=0" +
-       
-        encodeURIComponent(message),
-        "_blank"
-    );
-}
-</script>
                         <p class="text-center text-zinc-500 text-[10px] leading-relaxed">
                             * بعد نقر الزر، ستفتح نافذة الدردشة واتساب لرسالة تأكيد طلبكم وعنوانكم. الشحن السريع في غضون 24-48 ساعة.
                         </p>
@@ -842,10 +825,10 @@ function sendWhatsApp() {
                 <span class="tagora-social-handle">tagora_nfc</span>
             </a>
 
-            <a href="https://www.tiktok.com/@tagora_nfc?_r=1&_t=ZS-97NbkBeVSpL" target="_blank" class="tagora-social-card tagora-tiktok">
+            <a href="https://www.tiktok.com/@tagora.nfc?_r=1&_t=ZS-97M1htXWDYo" target="_blank" class="tagora-social-card tagora-tiktok">
                 <i class="fa-brands fa-tiktok" style="color:#ffffff;"></i>
                 <span class="tagora-social-name">TikTok</span>
-                <span class="tagora-social-handle">tagora_nfc</span>
+                <span class="tagora-social-handle">tagora.nfc</span>
             </a>
 
         </div>
@@ -1339,10 +1322,17 @@ function sendWhatsApp() {
             const inputName = document.getElementById('billing-name').value;
             const inputPhone = document.getElementById('billing-phone').value;
             const inputNotes = document.getElementById('billing-notes').value;
-            const inputLink = document.getElementById('wizard-link-input').value;
+            const linkField = document.getElementById('wizard-link-input');
+            const inputLink = linkField ? linkField.value.trim() : '';
 
             if (!inputName || !inputPhone || !checkoutSelectedCity) {
-                alert("Veuillez remplir l'id, le nom, la ville et le téléphone réglementaire.");
+                alert("Merci de remplir le nom, le numéro WhatsApp et la ville.");
+                return;
+            }
+
+            const cleanPhone = inputPhone.replace(/[^0-9+]/g, '');
+            if (cleanPhone.replace(/\D/g, '').length < 9) {
+                alert("Merci d'entrer un numéro de téléphone valide.");
                 return;
             }
 
@@ -1361,9 +1351,9 @@ function sendWhatsApp() {
             }
 
             // Génération du modèle de texte de commande pour WhatsApp
-            const messageText = `Salam TAGORA, bghit ndir commande list:\n\n` +
+            const messageText = `🛒 *NOUVELLE COMMANDE TAGORA NFC*\n\n` +
                 `👤 *Nom / الإسم:* ${inputName}\n` +
-                `📞 *Tél / الهاتف:* ${inputPhone}\n` +
+                `📞 *Tél / الهاتف:* ${cleanPhone}\n` +
                 `📍 *Ville / المدينة:* ${checkoutSelectedCity}\n\n` +
                 `--- *DÉTAILS COMMANDE / تفاصيل الطلب* ---\n` +
                 `📦 *Produit / المنتج:* Tagora ${activeProd.name} NFC\n` +
@@ -1371,7 +1361,7 @@ function sendWhatsApp() {
                 `🔗 *Lien d'activation / الرابط:* ${activePlat.name} (${formattedLink})\n` +
                 `💬 *Notes / ملاحظات:* ${inputNotes || '-'}\n\n` +
                 `💰 *Total / الدفع:* *${finalPrice} DH* (شحن مجاني وسريع)\n\n` +
-                `Merci d'activer ma commande dans les plus brefs délais ! ⚡🚀`;
+                `✅ المرجو تأكيد الطلب والتواصل معي عبر واتساب.\nالدفع عند الاستلام.`;
 
             const encodedText = encodeURIComponent(messageText);
             const whatsappUrl = `https://wa.me/212715374284?text=${encodedText}`;
