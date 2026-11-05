@@ -663,11 +663,11 @@
                                 </span>
                                 <div>
                                     <span class="text-[10px] text-zinc-500 font-mono tracking-widest uppercase block mb-1">TAGORA NFC</span>
-                                    <h4 class="text-white text-lg font-bold font-orbitron text-left">Infinities Card</h4>
+                                    <h4 class="text-white text-lg font-bold font-orbitron text-left">Google Reviews NFC Card</h4>
                                     <p class="text-xs text-zinc-400 font-sans mt-1 text-left">البطاقة الفاخرة لزيادة تقييمات قوقل ومضاعفة زملائك</p>
                                 </div>
                                 <div class="flex items-baseline gap-2 mt-2">
-                                    <span class="text-brand-cyan text-lg font-black font-orbitron">199 DH</span>
+                                    <span class="text-brand-cyan text-lg font-black font-orbitron">159 DH</span>
                                     <span class="text-zinc-600 text-xs line-through">249 DH</span>
                                 </div>
                             </button>
@@ -854,7 +854,7 @@ class="w-full bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-
             <div class="p-6 bg-zinc-900/40 border border-zinc-800 rounded-2xl space-y-4">
                 <div class="flex gap-1 text-amber-400 text-xs">★★★★★</div>
                 <p class="text-xs text-zinc-300 font-sans leading-relaxed">
-                    "Nous avons placé la carte Google Reviews Infinities à côté du terminal de paiement de notre restaurant. Les clients adorent le concept, nous avons obtenu plus de 120 avis positifs en un seul mois !"
+                    "Nous avons placé la carte Google Reviews NFC à côté du terminal de paiement de notre restaurant. Les clients adorent le concept, nous avons obtenu plus de 120 avis positifs en un seul mois !"
                 </p>
                 <div class="border-t border-zinc-800/80 pt-3 flex items-center gap-3">
                     <div class="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-bold text-brand-cyan">KM</div>
@@ -882,7 +882,7 @@ class="w-full bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-
             <div class="p-6 bg-zinc-900/40 border border-zinc-800 rounded-2xl space-y-4">
                 <div class="flex gap-1 text-amber-400 text-xs">★★★★★</div>
                 <p class="text-xs text-zinc-300 font-sans leading-relaxed">
-                    "J'utilise la carte NFC Infinities dans mon cabinet dentaire. Cela rend le processus tellement ludique et discret pour demander des avis à mes patients. Une visibilité locale multipliée par cinq !"
+                    "J'utilise la carte Google Reviews NFC dans mon cabinet dentaire. Cela rend le processus tellement ludique et discret pour demander des avis à mes patients. Une visibilité locale multipliée par cinq !"
                 </p>
                 <div class="border-t border-zinc-800/80 pt-3 flex items-center gap-3">
                     <div class="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-xs font-bold text-brand-cyan">DL</div>
@@ -933,8 +933,8 @@ class="w-full bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-
 
         // Base de Données des produits
         const PRODUCTS = {
-            tagore: { id: 'tagore', name: 'Tagore Sticker', price: 149 },
-            infinities: { id: 'infinities', name: 'Infinities Card', price: 249 }
+            tagore: { id: 'tagore', name: 'Tagore Sticker', price: 119 },
+            infinities: { id: 'infinities', name: 'Google Reviews NFC Card', price: 159 }
         };
 
         // Base de Données des réseaux
@@ -1240,7 +1240,7 @@ class="w-full bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-
             document.getElementById('checkout-quantity-label').innerText = checkoutQuantity;
             
             const promoBadge = document.getElementById('checkout-promo-badge');
-            if (checkoutQuantity > 1) {
+            if (false) {
                 promoBadge.classList.remove('hidden');
                 promoBadge.classList.add('flex');
             } else {
@@ -1256,27 +1256,12 @@ class="w-full bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-
             let finalPaidPrice = baseTotal;
             let activePromoDiscount = 0;
 
-            if (checkoutProduct === 'tagore') {
-                if (checkoutQuantity === 2) finalPaidPrice = 249;
-                else if (checkoutQuantity >= 3) finalPaidPrice = 349 + (checkoutQuantity - 3) * 110;
-            } else { 
-                if (checkoutQuantity === 2) finalPaidPrice = 399;
-                else if (checkoutQuantity >= 3) finalPaidPrice = 549 + (checkoutQuantity - 3) * 180;
-            }
-
             activePromoDiscount = baseTotal - finalPaidPrice;
 
             document.getElementById('bill-product-name').innerText = `${prod.name} (x${checkoutQuantity})`;
             document.getElementById('bill-base-price').innerText = `${baseTotal} DH`;
 
-            const discountRow = document.getElementById('bill-promo-discount-row');
-            if (activePromoDiscount > 0) {
-                discountRow.classList.remove('hidden');
-                document.getElementById('bill-discount-price').innerText = `-${activePromoDiscount} DH`;
-            } else {
-                discountRow.classList.add('hidden');
-            }
-
+            
             document.getElementById('bill-final-price').innerText = `${finalPaidPrice} DH`;
         }
 
@@ -1342,13 +1327,6 @@ class="w-full bg-gradient-to-r from-emerald-500 to-green-500 hover:from-emerald-
 
             let rawBasePrice = activeProd.price * checkoutQuantity;
             let finalPrice = rawBasePrice;
-            if (checkoutProduct === 'tagore') {
-                if (checkoutQuantity === 2) finalPrice = 249;
-                else if (checkoutQuantity >= 3) finalPrice = 349 + (checkoutQuantity - 3) * 110;
-            } else {
-                if (checkoutQuantity === 2) finalPrice = 399;
-                else if (checkoutQuantity >= 3) finalPrice = 549 + (checkoutQuantity - 3) * 180;
-            }
 
             // Génération du modèle de texte de commande pour WhatsApp
             const messageText = `🛒 *NOUVELLE COMMANDE TAGORA NFC*\n\n` +
